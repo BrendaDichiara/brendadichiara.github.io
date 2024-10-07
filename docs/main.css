@@ -1,0 +1,51 @@
+html,body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#banner {
+  position: relative;
+  background-image: url('img/cs-background.webp');
+  top: 45px;
+}
+
+.w3-sidebar {
+    z-index: 3;
+    width: 200px;
+    top: 43px;
+    height: inherit;
+}
+
+#content {
+  top: 50px;
+  position: relative;
+  overflow: auto;
+  background-image: radial-gradient(95.09% 118.5% at 43.64% 75.17%, rgba(162, 188, 255, 0.216) 45.19%, rgba(118, 139, 252, 0.5) 86.75%)
+}
+
+#sponsors > a,
+#supporters > a {
+  margin: 40px;
+}
+
+.staff-img {
+    width: 100px;
+}
+
+.staff-name {
+    margin-left: 2rem;
+}
+
+.course {
+  background-color: whitesmoke;
+}
+
+footer {
+    position: relative;
+    margin-top: 5em;
+    text-align: center;
+}
