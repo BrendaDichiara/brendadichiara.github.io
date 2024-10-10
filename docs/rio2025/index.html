@@ -4,14 +4,11 @@
     <title>Summer School - Río 2025</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- W3.CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-    <!-- Fuentes y Font Awesome -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="main.css">
 </head>
 <body onload="init()">
@@ -19,19 +16,13 @@
     <!-- Navbar -->
     <div class="w3-top">
       <div id="navbar-items" class="w3-bar w3-theme w3-large navbar-container">
-        
-        <!-- Botón de menú para dispositivos móviles -->
-        <a class="w3-bar-item w3-button w3-hide-large w3-hover-white w3-large w3-theme-l1"
+          <a class="w3-bar-item w3-button w3-hide-large w3-hover-white w3-large w3-theme-l1"
            href="javascript:void(0)" onclick="w3_open()">
            <i class="fa fa-bars"></i>
         </a>
-        
-        <!-- Logo de la UNRC -->
         <a href="#content" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-logo">
           <img src="img/logo.png" alt="Logo UNRC" class="logo-svg" style="height: 75px;">
         </a>
-        
-        <!-- Ítems de navegación centrados -->
         <div class="navbar-menu">
           <a href="#content" onclick="return load_content('about')" class="w3-bar-item w3-button w3-hide-small w3-hover-custom">
             Home
@@ -57,12 +48,11 @@
           <a href="#content" onclick="return load_content('scholarship')" class="w3-bar-item w3-button w3-hide-small w3-hover-custom">
             Scholarship
           </a>
-        </div>
-        
+        </div> 
       </div>
     </div>
 
-    <!-- Sidebar para móviles -->
+    <!-- sidebar -->
     <div id="sidebar" class="sidebar w3-hide-large">
         <button class="close-btn" onclick="w3_close()">×</button>
         <a href="#content" onclick="return load_content('about')">Home</a>
@@ -75,45 +65,53 @@
         <a href="#content" onclick="return load_content('scholarship')">Scholarship</a>
     </div>
     
-    <!-- Banner -->
-    <div id="banner">
-        <img alt="Summer School Río 2025" src="img/logo.png" height="100px">
-    </div>
-    
-    <!-- Main content -->
-    <div class="main-content">
+    <div class="wrapper">
+
+  <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+  <div class="main-content">
+
+        <!-- content -->
         <div id="content" class="w3-container"></div>
+        <!-- ========================================================= -->
     </div>
-    
-    <!-- Footer -->
-    <footer class="footer w3-theme">
-        <div class="w3-row-padding">
-            <!-- Contact Information -->
-            <div class="w3-half">
-                <h3>Contact</h3>
-                <p><i class="fa fa-map-marker w3-text-light-grey"></i> Ruta Nacional 36, Km 601, Río Cuarto, Córdoba, Argentina</p>
-                <p><i class="fa fa-phone w3-text-light-grey"></i> <a href="tel:+543584676235" class="w3-text-light-grey">[+54] 358 467-6235</a></p>
-                <p><i class="fa fa-envelope w3-text-light-grey"></i> <a href="mailto:rio@dc.exa.unrc.edu.ar" class="w3-text-light-grey">rio@dc.exa.unrc.edu.ar</a></p>
-            </div>
-            <!-- Social Media Links -->
-            <div class="w3-half w3-center">
-                <h3>Follow us</h3>
-                <a href="https://www.facebook.com/EscuelaDeVeranoRio/" class="w3-button w3-theme-l1 w3-margin social-icon facebook">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                <a href="https://twitter.com/escuelaRio?ref_src=twsrc%5Etfw" class="w3-button w3-theme-l1 w3-margin social-icon twitter">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/escuelario/" class="w3-button w3-theme-l1 w3-margin social-icon instagram">
-                    <i class="fa fa-instagram"></i>
-                </a>
-            </div>
+
+   <!-- END MAIN --> 
+  </div>
+
+
+  <footer class="footer w3-theme">
+    <div class="w3-row-padding w3-center">
+        <div class="w3-third">
+            <h3>Contact</h3>
+            <p><i class="fa fa-map-marker w3-text-light-grey"></i> Ruta Nacional 36, Km 601, Río Cuarto, Córdoba, Argentina</p>
+            <p><i class="fa fa-phone w3-text-light-grey"></i> <a href="tel:+543584676235" class="w3-text-light-grey">[+54] 358 467-6235</a></p>
+            <p><i class="fa fa-envelope w3-text-light-grey"></i> <a href="mailto:rio@dc.exa.unrc.edu.ar" class="w3-text-light-grey">rio@dc.exa.unrc.edu.ar</a></p>
         </div>
-        <div class="w3-margin-top">
-            <p class="footer-copy w3-text-light-grey">RIO2025 &copy; 2025 Todos los derechos reservados</p>
+
+        <div class="w3-third countdown">
+            <p>The RIO will start in:</p>
+            <div id="countdown"></div>
         </div>
-    </footer>
-    
+        
+        <div class="w3-third">
+            <h3>Follow us</h3>
+            <a href="https://www.facebook.com/EscuelaDeVeranoRio/" class="w3-button w3-theme-l1 w3-margin social-icon facebook">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/escuelaRio?ref_src=twsrc%5Etfw" class="w3-button w3-theme-l1 w3-margin social-icon twitter">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/escuelario/" class="w3-button w3-theme-l1 w3-margin social-icon instagram">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="w3-margin-top">
+        <p class="footer-copy w3-text-light-grey">RIO2025 &copy; 2025 Todos los derechos reservados</p>
+    </div>
+</footer>
+
     <script src="utils.js"></script>
     
 </body>

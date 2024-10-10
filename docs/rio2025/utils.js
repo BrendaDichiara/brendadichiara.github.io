@@ -36,3 +36,39 @@ function markdown_to_html(md) {
 function init() {
     load_content('about')
 }
+
+// utils.js o countdown.js
+
+function startCountdown() {
+  // Fecha objetivo (10 de marzo del próximo año)
+  const targetDate = new Date(2025, 2, 10).getTime();
+
+  // Actualiza el contador cada segundo
+  const countdownFunction = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      // Cálculos de tiempo
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Muestra el resultado en el elemento con id="countdown"
+      document.getElementById("countdown").innerHTML = 
+          days + "d " + hours + "h " 
+          + minutes + "m " + seconds + "s ";
+
+      // Si el conteo termina
+      if (distance < 0) {
+          clearInterval(countdownFunction);
+          document.getElementById("countdown").innerHTML = "The event has started!";
+      }
+  }, 1000);
+}
+
+// Llama a la función al cargar la página
+window.onload = function() {
+  init(); // Tu función existente para cargar el contenido inicial
+  startCountdown(); // Inicia el contador
+};

@@ -1,40 +1,45 @@
-/* main.css */
-
-/* Tipografía global */
 html, body, h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
 }
 
-/* Estilo para el banner */
+h1 {
+  font-weight: bold;
+  text-decoration: underline;
+}
 
-/* Navbar Container */
+#content {
+  overflow: auto;
+  background-image: radial-gradient(95.09% 118.5% at 43.64% 75.17%, rgba(162, 188, 255, 0.216) 45.19%, rgba(118, 139, 252, 0.5) 86.75%);
+  position: relative;
+  padding-top: 100px; 
+  padding-bottom: 0; 
+  min-height: calc(100vh - 82px - 100px);
+  box-sizing: border-box;
+}
+
 .navbar-container {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centra los ítems */
-  position: relative; /* Para posicionar el logo */
+  justify-content: center;
+  position: relative;
   padding: 0 20px;
-  height: 82px; /* Altura de la navbar */
+  height: 82px;
 }
 
-/* Logo de la UNRC */
 .logo-svg {
   height: 80px;
 }
 
-/* Posicionar el logo a la izquierda */
 .w3-logo {
   position: absolute;
   left: 20px;
 }
 
-/* Menú centrado */
 .navbar-menu {
   display: flex;
-  font-size: 16px; /* Tamaño de fuente más pequeño */
+  font-size: 16px; 
 }
 
-/* Estilo de los enlaces del menú */
 .navbar-menu a {
   position: relative;
   padding: 14px 16px;
@@ -43,7 +48,6 @@ html, body, h1, h2, h3, h4, h5, h6 {
   transition: color 0.3s ease;
 }
 
-/* Efecto de subrayado al pasar el mouse */
 .navbar-menu a::after {
   content: '';
   position: absolute;
@@ -63,7 +67,6 @@ html, body, h1, h2, h3, h4, h5, h6 {
   color: #ff0808;
 }
 
-/* Icono de menú para móviles */
 .navbar-toggle {
   display: none;
   color: #ffffff;
@@ -71,11 +74,10 @@ html, body, h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* Sidebar para móviles */
 .sidebar {
   display: none;
   position: fixed;
-  top: 60px; /* Altura de la navbar */
+  top: 60px; 
   left: 0;
   width: 250px;
   height: 100%;
@@ -108,19 +110,16 @@ html, body, h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* Contenedor principal */
-.main-content {
-  padding: 80px 20px 20px 20px; /* Espacio para la navbar fija */
-  background: radial-gradient(95.09% 118.5% at 43.64% 75.17%, rgba(162, 188, 255, 0.216) 45.19%, rgba(118, 139, 252, 0.5) 86.75%);
-  min-height: 100vh;
+.staff-img {
+  width: 100px;
 }
 
-/* Footer */
-.footer {
-  background-color: #1e3a8a;
-  color: #ffffff;
-  padding: 20px;
-  text-align: center;
+.staff-name {
+  margin-left: 2rem;
+}
+
+.course {
+  background-color: whitesmoke;
 }
 
 .footer-contact, .footer-social {
@@ -148,8 +147,7 @@ html, body, h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .navbar-menu {
       display: none;
   }
@@ -167,7 +165,21 @@ html, body, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-
 .navbar-menu .w3-bar-item {
   padding: .5em;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.footer {
+  background-color: rgba(30, 58, 138, 0.8);
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
