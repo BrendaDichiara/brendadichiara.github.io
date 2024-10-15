@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <title>Summer School - Río 2025</title>
     <meta charset="UTF-8">
@@ -13,106 +13,119 @@
 </head>
 <body onload="init()">
 
-    <!-- Navbar -->
-    <div class="w3-top">
-      <div id="navbar-items" class="w3-bar w3-theme w3-large navbar-container">
-          <a class="w3-bar-item w3-button w3-hide-large w3-hover-white w3-large w3-theme-l1"
-           href="javascript:void(0)" onclick="w3_open()">
-           <i class="fa fa-bars"></i>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div id="navbar-items" class="w3-bar w3-large navbar-container">
+      <a class="w3-bar-item w3-button w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)"
+        onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#content" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-logo">
+        <img src="img/logo.png" alt="Logo UNRC" style="height: 70px;">
+      </a>
+      <div class="navbar-menu">
+        <a href="#content" onclick="return load_content('about')" class="w3-bar-item w3-hide-small">
+          Home
         </a>
-        <a href="#content" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-logo">
-          <img src="img/logo.png" alt="Logo UNRC" class="logo-svg" style="height: 75px;">
+        <a href="#content" onclick="return load_content('courses')" class="w3-bar-item w3-hide-small">
+          Courses
         </a>
-        <div class="navbar-menu">
-          <a href="#content" onclick="return load_content('about')" class="w3-bar-item w3-button w3-hide-small w3-hover-custom">
-            Home
-          </a>
-          <a href="#content" onclick="return load_content('courses')" class="w3-bar-item w3-button w3-hide-small w3-hover-custom">
-            Courses
-          </a>
-          <a href="#content" onclick="return load_content('sponsors')" class="w3-bar-item w3-button w3-hide-small w3-hover-custom">
-            Sponsors
-          </a>
-          <a href="#content" onclick="return load_content('organization')" class="w3-bar-item w3-button w3-hide-small w3-hover-custom">
-            Organization Staff
-          </a>
-          <a href="#content" onclick="return load_content('schedule')" class="w3-bar-item w3-button w3-hide-small w3-hover-custom">
-            Schedule
-          </a>
-          <a href="#content" onclick="return load_content('registration')" class="w3-bar-item w3-button w3-hide-small w3-hover-custom">
-            Registration
-          </a>
-          <a href="#content" onclick="return load_content('venue')" class="w3-bar-item w3-button w3-hide-small w3-hover-custom">
-            Venue
-          </a>
-          <a href="#content" onclick="return load_content('scholarship')" class="w3-bar-item w3-button w3-hide-small w3-hover-custom">
-            Scholarship
-          </a>
-        </div> 
+        <a href="#content" onclick="return load_content('sponsors')" class="w3-bar-item w3-hide-small">
+          Sponsors
+        </a>
+        <a href="#content" onclick="return load_content('organization')" class="w3-bar-item w3-hide-small">
+          Organization Staff
+        </a>
+        <a href="#content" onclick="return load_content('schedule')" class="w3-bar-item w3-hide-small">
+          Schedule
+        </a>
+        <a href="#content" onclick="return load_content('registration')" class="w3-bar-item w3-hide-small">
+          Registration
+        </a>
+        <a href="#content" onclick="return load_content('venue')" class="w3-bar-item w3-hide-small">
+          Venue
+        </a>
+        <a href="#content" onclick="return load_content('scholarship')" class="w3-bar-item w3-hide-small">
+          Scholarship
+        </a>
       </div>
     </div>
+  </div>
 
-    <!-- sidebar -->
-    <div id="sidebar" class="sidebar w3-hide-large">
-        <button class="close-btn" onclick="w3_close()">×</button>
-        <a href="#content" onclick="return load_content('about')">Home</a>
-        <a href="#content" onclick="return load_content('courses')">Courses</a>
-        <a href="#content" onclick="return load_content('sponsors')">Sponsors</a>
-        <a href="#content" onclick="return load_content('organization')">Organization Staff</a>
-        <a href="#content" onclick="return load_content('schedule')">Schedule</a>
-        <a href="#content" onclick="return load_content('registration')">Registration</a>
-        <a href="#content" onclick="return load_content('venue')">Venue</a>
-        <a href="#content" onclick="return load_content('scholarship')">Scholarship</a>
+  <!-- Sidebar -->
+  <div id="sidebar" class="w3-sidebar w3-bar-block w3-collapse w3-card w3-hide-large" style="width:25%">
+    <button class="w3-bar-item w3-button w3-hide-large" onclick="w3_close()">Close <span class="w3-right">&times;</span>
+    </button>
+    <a href="#content" onclick="return load_content('about')"
+      class="w3-bar-item w3-button w3-hide-large w3-hover-white">
+      About
+    </a>
+    <a href="#content" onclick="return load_content('courses')"
+      class="w3-bar-item w3-button w3-hide-large w3-hover-white">
+      Courses
+    </a>
+    <a href="#content" onclick="return load_content('sponsors')"
+      class="w3-bar-item w3-button w3-hide-large w3-hover-white">
+      Sponsors
+    </a>
+    <a href="#content" onclick="return load_content('organization')"
+      class="w3-bar-item w3-button w3-hide-large w3-hover-white">
+      Organization
+    </a>
+  </div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="main-content">
+
+      <!-- content -->
+      <div id="content" class="w3-container"></div>
+      <!-- ========================================================= -->
     </div>
-    
-    <div class="wrapper">
 
-  <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
-  <div class="main-content">
-
-        <!-- content -->
-        <div id="content" class="w3-container"></div>
-        <!-- ========================================================= -->
-    </div>
-
-   <!-- END MAIN --> 
+    <!-- END MAIN -->
   </div>
 
 
-  <footer class="footer w3-theme">
+  <footer id="footer2" class="w3-container w3-text-light-grey">
     <div class="w3-row-padding w3-center">
-        <div class="w3-third">
-            <h3>Contact</h3>
-            <p><i class="fa fa-map-marker w3-text-light-grey"></i> Ruta Nacional 36, Km 601, Río Cuarto, Córdoba, Argentina</p>
-            <p><i class="fa fa-phone w3-text-light-grey"></i> <a href="tel:+543584676235" class="w3-text-light-grey">[+54] 358 467-6235</a></p>
-            <p><i class="fa fa-envelope w3-text-light-grey"></i> <a href="mailto:rio@dc.exa.unrc.edu.ar" class="w3-text-light-grey">rio@dc.exa.unrc.edu.ar</a></p>
-        </div>
+      <div class="w3-third">
+        <h3>Contact</h3>
+        <p><i class="fa fa-map-marker"></i> Ruta Nacional 36, Km 601, Río Cuarto, Córdoba, Argentina
+        </p>
+        <p><i class="fa fa-phone "></i> <a href="tel:+543584676235">[+54]
+            358 467-6235</a></p>
+        <p><i class="fa fa-envelope "></i> <a href="mailto:rio@dc.exa.unrc.edu.ar"> rio@dc.exa.unrc.edu.ar</a></p>
+      </div>
 
-        <div class="w3-third countdown">
-            <p>The RIO will start in:</p>
-            <div id="countdown"></div>
+      <div class="w3-third">
+        <p>The RIO will start in:</p>
+        <div id="countdown" class="w3-xxxlarge">
         </div>
-        
-        <div class="w3-third">
-            <h3>Follow us</h3>
-            <a href="https://www.facebook.com/EscuelaDeVeranoRio/" class="w3-button w3-theme-l1 w3-margin social-icon facebook">
-                <i class="fa fa-facebook"></i>
-            </a>
-            <a href="https://twitter.com/escuelaRio?ref_src=twsrc%5Etfw" class="w3-button w3-theme-l1 w3-margin social-icon twitter">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/escuelario/" class="w3-button w3-theme-l1 w3-margin social-icon instagram">
-                <i class="fa fa-instagram"></i>
-            </a>
-        </div>
+      </div>
+
+      <div class="w3-third">
+        <h3>Follow us</h3>
+        <a href="https://www.facebook.com/EscuelaDeVeranoRio/"
+          class="w3-button w3-theme-l1 w3-margin social-icon facebook">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com/escuelaRio?ref_src=twsrc%5Etfw"
+          class="w3-button w3-theme-l1 w3-margin social-icon twitter">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/escuelario/" class="w3-button w3-theme-l1 w3-margin social-icon instagram">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </div>
     </div>
 
     <div class="w3-margin-top">
-        <p class="footer-copy w3-text-light-grey">RIO2025 &copy; 2025 Todos los derechos reservados</p>
+      <p> RIO2025 &copy; 2025 Todos los derechos reservados</p>
     </div>
-</footer>
+  </footer>
 
-    <script src="utils.js"></script>
-    
+  <script src="utils.js"></script>
+
 </body>
+
 </html>
