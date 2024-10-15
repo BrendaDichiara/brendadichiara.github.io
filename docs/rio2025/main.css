@@ -70,57 +70,6 @@ h1 {
 
 
 
-/*ToDo:refactor below */
-
-
-.navbar-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding: 0 20px;
-  height: 82px;
-  background-color: rgb(1, 38, 38);
-}
-.navbar-menu {
-  display: flex;
-  font-size: 16px; 
-}
-
-.navbar-menu a {
-  position: relative;
-  padding: 14px 16px;
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.navbar-menu a::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-  transition: width 0.3s ease;
-}
-
-.navbar-menu a:hover::after {
-  width: 100%;
-}
-
-.navbar-toggle {
-  display: none;
-  color: #ffffff;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-
-
-
-
 
 
 
