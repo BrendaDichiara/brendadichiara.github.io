@@ -15,19 +15,21 @@
 
   <!-- Navbar -->
   <div class="w3-top">
-    <div id="navbar-items" class="w3-bar w3-large navbar-container">
+    <div id="navbar-items" class="w3-bar w3-red w3-large" style="padding: 10px 0">
       <a class="w3-bar-item w3-button w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)"
         onclick="w3_open()">
         <i class="fa fa-bars"></i>
       </a>
+      
       <a href="#content" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-logo">
-        <img src="img/logo.png" alt="Logo UNRC" style="height: 70px;">
+        <img src="img/logo.png" alt="Logo UNRC" style="height: 70px; vertical-align: sub;">
       </a>
-      <div class="navbar-menu">
-        <a href="#content" onclick="return load_content('about')" class="w3-bar-item w3-hide-small">
+      
+      <div style="margin-top: 1em;"> 
+        <a href="#content" onclick="return load_content('about')" class="w3-bar-item w3-hide-small w3-hover-white">
           Home
         </a>
-        <a href="#content" onclick="return load_content('courses')" class="w3-bar-item w3-hide-small">
+        <a href="#content" onclick="return load_content('courses')" class="w3-bar-item w3-hide-small w3-hover-white">
           Courses
         </a>
         <a href="#content" onclick="return load_content('sponsors')" class="w3-bar-item w3-hide-small">
@@ -78,7 +80,7 @@
     <div class="main-content">
 
       <!-- content -->
-      <div id="content" class="w3-container"></div>
+      <div id="content" class="w3-container" style="margin-top: 1.3em;"></div>
       <!-- ========================================================= -->
     </div>
 
@@ -88,7 +90,7 @@
 
   <footer id="footer2" class="w3-container w3-text-light-grey">
     <div class="w3-row-padding w3-center">
-      <div class="w3-third">
+      <div class="w3-third footer-column">
         <h3>Contact</h3>
         <p><i class="fa fa-map-marker"></i> Ruta Nacional 36, Km 601, Río Cuarto, Córdoba, Argentina
         </p>
@@ -97,13 +99,14 @@
         <p><i class="fa fa-envelope "></i> <a href="mailto:rio@dc.exa.unrc.edu.ar"> rio@dc.exa.unrc.edu.ar</a></p>
       </div>
 
-      <div class="w3-third">
-        <p>The RIO will start in:</p>
-        <div id="countdown" class="w3-xxxlarge">
+      <div class="w3-third footer-column">
+        <h4>The RIO will start in:</h4>
+        <div id="countdown" class="w3-xlarge">
         </div>
+        <p style="margin-top: 13px;"> RIO2025 &copy; 2025 Todos los derechos reservados</p>
       </div>
 
-      <div class="w3-third">
+      <div class="w3-third footer-column">
         <h3>Follow us</h3>
         <a href="https://www.facebook.com/EscuelaDeVeranoRio/"
           class="w3-button w3-theme-l1 w3-margin social-icon facebook">
@@ -119,9 +122,7 @@
       </div>
     </div>
 
-    <div class="w3-margin-top">
-      <p> RIO2025 &copy; 2025 Todos los derechos reservados</p>
-    </div>
+ 
   </footer>
 
   <script src="utils.js"></script>

@@ -30,10 +30,6 @@ h1 {
   text-align: center;
 }
 
-.w3-logo {
-  position: absolute;
-  left: 20px;
-}
 
 .staff-img {
   width: 100px;
@@ -67,7 +63,10 @@ h1 {
   color: #d1d5db;
 }
 
-
+.footer-column p, .footer-column a {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 
 
 
