@@ -13,47 +13,44 @@
 </head>
 
 <body onload="init()">
-
-  <div class="wrapper">
-
     <!-- Navbar -->
     <div class="w3-top">
-      <div id="navbar-items" class="w3-bar w3-large" style="padding: 10px 0; background-color: #6ACFC7;">
+      <div id="navbar-items" class="w3-bar w3-large" style="padding: 1px 0; background-color: #6ACFC7;">
         <a class="w3-bar-item w3-button w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)"
           onclick="w3_open()">
           <i class="fa fa-bars"></i>
         </a>
-
+        
         <a href="#content" class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-logo">
           <img src="img/logo25.png" alt="Logo UNRC" style="height: 70px; vertical-align: sub;">
         </a>
 
-        <div style="margin-top: 1em;">
-          <a href="#content" onclick="return load_content('about')" class="w3-bar-item w3-hide-small w3-hover-white">
+        <div class="navbar-menu" style="margin-top: 1em;">
+          <a href="#content" onclick="return load_content('about')" class="w3-bar-item w3-hide-small" style="text-decoration: none;">
             Home
           </a>
-          <a href="#content" onclick="return load_content('courses')" class="w3-bar-item w3-hide-small w3-hover-white">
+          <a href="#content" onclick="return load_content('courses')" class="w3-bar-item w3-hide-small" style="text-decoration: none;">
             Courses
           </a>
-          <a href="#content" onclick="return load_content('sponsors')" class="w3-bar-item w3-hide-small w3-hover-white">
+          <a href="#content" onclick="return load_content('sponsors')" class="w3-bar-item w3-hide-small" style="text-decoration: none;">
             Sponsors
           </a>
           <a href="#content" onclick="return load_content('organization')"
-            class="w3-bar-item w3-hide-small w3-hover-white">
+            class="w3-bar-item w3-hide-small" style="text-decoration: none;">
             Organization Staff
           </a>
-          <a href="#content" onclick="return load_content('schedule')" class="w3-bar-item w3-hide-small w3-hover-white">
+          <a href="#content" onclick="return load_content('schedule')" class="w3-bar-item w3-hide-small" style="text-decoration: none;">
             Schedule
           </a>
           <a href="#content" onclick="return load_content('registration')"
-            class="w3-bar-item w3-hide-small w3-hover-white">
+            class="w3-bar-item w3-hide-small" style="text-decoration: none;">
             Registration
           </a>
-          <a href="#content" onclick="return load_content('venue')" class="w3-bar-item w3-hide-small w3-hover-white">
+          <a href="#content" onclick="return load_content('venue')" class="w3-bar-item w3-hide-small" style="text-decoration: none;">
             Venue
           </a>
           <a href="#content" onclick="return load_content('scholarship')"
-            class="w3-bar-item w3-hide-small w3-hover-white">
+            class="w3-bar-item w3-hide-small" style="text-decoration: none;">
             Scholarship
           </a>
         </div>
@@ -67,7 +64,7 @@
       </button>
       <a href="#content" onclick="return load_content('about')"
         class="w3-bar-item w3-button w3-hide-large w3-hover-black">
-        About
+        Home
       </a>
       <a href="#content" onclick="return load_content('courses')"
         class="w3-bar-item w3-button w3-hide-large w3-hover-black">
@@ -79,7 +76,21 @@
       </a>
       <a href="#content" onclick="return load_content('organization')"
         class="w3-bar-item w3-button w3-hide-large w3-hover-black">
-        Organization
+        Organization Staff
+      </a>
+      <a href="#content" onclick="return load_content('schedule')" class="w3-bar-item w3-button w3-hide-large w3-hover-black">
+        Schedule
+      </a>
+      <a href="#content" onclick="return load_content('registration')"
+        class="w3-bar-item w3-button w3-hide-large w3-hover-black">
+        Registration
+      </a>
+      <a href="#content" onclick="return load_content('venue')" class="w3-bar-item w3-button w3-hide-large w3-hover-black">
+        Venue
+      </a>
+      <a href="#content" onclick="return load_content('scholarship')"
+        class="w3-bar-item w3-button w3-hide-large w3-hover-black">
+        Scholarship
       </a>
     </div>
 
@@ -109,27 +120,27 @@
       <div class="w3-third footer-column">
         <h4>The RIO will start in:</h4>
         <div id="countdown" class="w3-xlarge">
+          <p> ... </p>
         </div>
-        <p style="margin-top: 13px;"> RIO2025 &copy; 2025 Todos los derechos reservados</p>
+        <p style="margin-top: 20px;"> RIO2025 &copy; 2025 Todos los derechos reservados</p>
       </div>
 
       <div class="w3-third footer-column">
         <h3>Follow us</h3>
         <a href="https://www.facebook.com/EscuelaDeVeranoRio/"
-          class="w3-button w3-theme-l1 w3-margin social-icon facebook">
+          class="w3-button w3-theme-l1 w3-margin">
           <i class="fa fa-facebook"></i>
         </a>
         <a href="https://twitter.com/escuelaRio?ref_src=twsrc%5Etfw"
-          class="w3-button w3-theme-l1 w3-margin social-icon twitter">
+          class="w3-button w3-theme-l1 w3-margin">
           <i class="fa fa-twitter"></i>
         </a>
-        <a href="https://www.instagram.com/escuelario/" class="w3-button w3-theme-l1 w3-margin social-icon instagram">
+        <a href="https://www.instagram.com/escuelario/" class="w3-button w3-theme-l1 w3-margin">
           <i class="fa fa-instagram"></i>
         </a>
       </div>
     </div>
   </footer>
-  </div>
 
   <script src="utils.js"></script>
 

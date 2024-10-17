@@ -23,41 +23,20 @@ h1 {
   padding: .5em;
 }
 
+.navbar-menu a:hover {
+  border-bottom: 2px solid black; 
+}
+
 #footer2 {
-  background-color: #6ACFC7;
-  text-align: center;
+  background-color: #6ACFC7;  
 }
 
 .staff-img {
   width: 100px;
 }
 
-.staff-name {
-  margin-left: 2rem;
-}
-
 .course {
   background-color: whitesmoke;
-}
-
-.footer-contact, .footer-social {
-  margin-bottom: 20px;
-}
-
-.footer-contact i, .footer-social i {
-  margin-right: 8px;
-}
-
-.footer-social .social-icon {
-  display: inline-block;
-  margin: 0 10px;
-  color: #ffffff;
-  font-size: 24px;
-  transition: color 0.3s ease;
-}
-
-.footer-social .social-icon:hover {
-  color: #d1d5db;
 }
 
 .footer-column p, .footer-column a {
